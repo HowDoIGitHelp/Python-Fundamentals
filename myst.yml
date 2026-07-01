@@ -1,0 +1,31 @@
+version: 1
+project:
+  title: Python Programming Fundamentals
+  authors:
+    - name: Rubelito Abella
+  github: HowDoIGitHelp/Python-Fundamentals
+  bibliography:
+    - references.bib
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - file: installing-python.ipynb
+    - file: jupyter-notebooks.ipynb
+    - file: expressions.ipynb
+    - file: datatypes.ipynb
+    - file: activity_expressions.md
+    - file: first-program.ipynb
+    - file: conditionals.ipynb
+    - file: loops.ipynb
+    - file: functions.ipynb
+    - file: sequences.ipynb
+    - file: OOP.ipynb
+    - file: imports.ipynb
+site:
+  options:
+    logo: images/logo.png
+    folders: true
+  template: book-theme
