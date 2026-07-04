@@ -229,8 +229,8 @@ Such as the nested loop below which increases the number of repetitions of the i
 
 ```{code-cell} ipython3
 i = 0
-j = 0
 while i < 4:
+    j = 0
     while j < i: # instead of looping a set amount of times, it loops based on the value of i
         print('i=' + str(i) + ', ' + 'j=' + str(j))
         j = j + 1
