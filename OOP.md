@@ -19,7 +19,7 @@ While OOP is a broad and deep domain, we will be introduced to its concepts in t
 One of the main philosophies of OOP is the concept of encapsulation and data hiding.
 OOP achieves these concepts through classes.
 Classes are able to encapsulate data and code through attributes and methods.
-Lets look at an example of a class.
+Lets look at an example of a class:
 
 ## Methods
 
@@ -84,11 +84,13 @@ print(inst2.attr1)
 print(inst2.attr2)
 ```
 
-Note that even though `lovalVar` is created inside the `__init__()` function, it will not be associated to the instance/class.
+Note that even though `localVar` is created inside the `__init__()` function, it will not be associated to the instance/class.
 This is because we did not use the dot notation to create the assignment.
 A variable such as this will only be a local variable of the `__init_()` function (usable only within the definition of `__init__()`)
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 print(inst2.localVar)
 ```
 

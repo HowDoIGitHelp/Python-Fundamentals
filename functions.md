@@ -144,6 +144,8 @@ This is possible because the code inside the function definition is self contain
 Variables created inside these functions cannot be accessed outside.
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 def isolatedFunction(x):
     y = 2
     z = 5

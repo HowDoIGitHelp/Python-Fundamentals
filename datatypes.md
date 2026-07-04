@@ -231,15 +231,19 @@ x or (not y)
 
 Refer to the truth table below to see how operators behave
 
-| and       | left operand  | right operand |
+| or       | left operand  | right operand |
 | --------- | ----- | ----- |
+| **True**  | True  | True  |
 | **True**  | True  | False |
+| **True**  | False | True  |
 | **False** | False | False |
 
-| or        | left operand  | right operand |
+| and        | left operand  | right operand |
 | --------- | ----- | ----- |
 | **True**  | True  | True  |
 | **False** | True  | False |
+| **False** | False | True  |
+| **False** | False | False |
 
 +++
 
@@ -445,18 +449,26 @@ coords + (2.1,)
 Appending, deletion, removal, and insertion are not allowed
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 coords.append(4.0)
 ```
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 del coords[1]
 ```
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 coords.remove(2.1)
 ```
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 coords.insert(0,0.1)
 ```
 
@@ -578,16 +590,18 @@ data
 ```
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 data["date"]
 ```
 
-> Now that the entry associated to `"date"` is now delete. Trying to retrieve it through indexing will cause a KeyError
+> Now that the entry associated to `"date"` is now delete. Trying to retrieve it through indexing will cause a `KeyError`
 
 +++
 
 ## Type compatibility
 
-When it comes to expressions with operations, we must take into account if the operation is compatible with the dataype of the operands and vice versa. For example, we can expect that the addition operation (`+`) is compatible with numeric types.
+When it comes to expressions with operations, we must take into account if the operation is compatible with the datatype of the operands and vice versa. For example, we can expect that the addition operation (`+`) is compatible with numeric types.
 
 ```{code-cell} ipython3
 1 + 2
@@ -604,20 +618,28 @@ When it comes to expressions with operations, we must take into account if the o
 Some operation-operand combinations are not compatible, an example of this is discussed earlier, strings and (`-`)
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+tags: [raises-exception]
+---
 'abc' - 'a'
 ```
 
-Trying to evaluate incompatibile expressions will cause a `TypeError` as seen above
+Trying to evaluate incompatible expressions will cause a `TypeError` as seen above
 
 +++
 
 Sometimes you might expect values to be compatible but they are actually not
 
 ```{code-cell} ipython3
+:tags: [raises-exception]
+
 '123' + 4
 ```
 
-In cases like this if you concatenate the two expression, you must expliciltly apply the necessary coercions
+In cases like this if you concatenate the two expression, you must explicitly apply the necessary coercions
 
 ```{code-cell} ipython3
 '123' + str(4)

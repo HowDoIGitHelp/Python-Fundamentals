@@ -92,7 +92,7 @@ else:
 ```
 
 ```{code-cell} ipython3
-num = int(input())
+num = 50
 if num > 60:
     print("High")
 else:
@@ -104,7 +104,7 @@ else:
 Creating `if-else` blocks, allows us to split the program into two branches. If we are looking for more than two we can compound `if-else` statements inside other `if` or `else` statements.
 
 ```{code-cell} ipython3
-num = int(input())
+num = 55
 if num > 60:
     print("High")
 else:
@@ -121,7 +121,7 @@ In the code above, the program can go in either three branches, if the inputted 
 You can write write three branches neatly using the `elif` block. `elif` is short for `else-if` and it acts like a combination of an `else` block and an `if` block. Using the `elif` block we can write a more readable program equivalent to the previous program.
 
 ```{code-cell} ipython3
-num = int(input())
+num = 30
 if num > 60:
     print("High")
 elif num <=60 and num > 40:
