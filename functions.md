@@ -96,8 +96,7 @@ print(isDivisible(23+2,2))
 
 ```{code-cell} ipython3
 def fullName(fname, mname, lname):
-    return fname + ' ' + mname[0] +'.
-' + lname
+    return fname + ' ' + mname[0] +'. ' + lname
 
 print('Hello, ' + fullName('Rubelito', 'Reboquio', 'Abella'))
 ```
