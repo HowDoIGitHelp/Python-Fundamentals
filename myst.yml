@@ -3,6 +3,7 @@ project:
   title: Python Programming Fundamentals
   authors:
     - name: Rubelito Abella
+    - name: Eli Edrian Tan
   github: HowDoIGitHelp/Python-Fundamentals
   bibliography:
     - references.bib
