@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="http://localhost:3000/sitemap_style.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:3001/sitemap_style.xsl" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:3000</loc>
+    <loc>http://localhost:3001</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/installing-python</loc>
+    <loc>http://localhost:3001/installing-python</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/jupyter-notebooks</loc>
+    <loc>http://localhost:3001/jupyter-notebooks</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/expressions</loc>
+    <loc>http://localhost:3001/expressions</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/datatypes</loc>
+    <loc>http://localhost:3001/datatypes</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/activity-expressions</loc>
+    <loc>http://localhost:3001/activity-expressions</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/first-program</loc>
+    <loc>http://localhost:3001/first-program</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/conditionals</loc>
+    <loc>http://localhost:3001/conditionals</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/loops</loc>
+    <loc>http://localhost:3001/loops</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/functions</loc>
+    <loc>http://localhost:3001/functions</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/sequences</loc>
+    <loc>http://localhost:3001/sequences</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/oop</loc>
+    <loc>http://localhost:3001/oop</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/imports</loc>
+    <loc>http://localhost:3001/imports</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3001/libraries-for-data-science</loc>
   </url>
 </urlset>
