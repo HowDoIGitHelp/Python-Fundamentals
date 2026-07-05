@@ -25,6 +25,7 @@ project:
     - file: sequences.ipynb
     - file: OOP.ipynb
     - file: imports.ipynb
+    - file: libraries-for-data-science.ipynb
 site:
   options:
     logo: images/logo.png
