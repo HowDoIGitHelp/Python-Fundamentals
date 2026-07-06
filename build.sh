@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+rm *-outputs.ipynb
 jupytext --to ipynb *.md
 for f in *.ipynb; do
     mv "$f" "${f%.ipynb}-outputs.ipynb"
