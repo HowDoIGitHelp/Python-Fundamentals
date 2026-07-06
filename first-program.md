@@ -1,16 +1,3 @@
----
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.19.4
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
----
-
 # First program
 
 The interpreter is handy for when we want to have Python calculate a few simple expressions, but it can get hard to use when we want to build programs out of it.
