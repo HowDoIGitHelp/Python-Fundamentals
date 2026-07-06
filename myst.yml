@@ -20,8 +20,10 @@ project:
     - file: OOP-outputs
     - file: imports-outputs
     - file: libraries-for-data-science-outputs
+
 site:
-  options:
-    logo: images/logo.png
-    folders: true
   template: book-theme
+  folders: true
+  options:
+    style: styles.css
+    logo: images/logo.png
