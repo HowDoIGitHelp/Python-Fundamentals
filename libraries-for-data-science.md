@@ -22,7 +22,7 @@ import numpy as np
 np.array([0, 1, 2, 3])
 ```
 
-You can create multidimensional arrays by providing the constructor with a list of list of numbers:
+You can create multidimensional arrays by providing the constructor with a nested list of numbers:
 
 ```{code-cell} ipython3
 mat = np.array([[1,2,3],[4,5,6]])
@@ -173,7 +173,7 @@ pd.Series(np.arange(100,601,100))
 ```
 
 All `Series` objects come with indices.
-By default indices are set to $[0, n-1]$ for a series with n elements.
+By default, indices are set to $[0, n-1]$ for a series with n elements.
 Indices can be any datatype, as long as the number of elements in the series match the number of elements in index.
 You can think of indices as the dictionary keys and the elements themselves as the values.
 
@@ -256,7 +256,7 @@ When you apply `numpy`'s universal function on `DataFrame` instances, the functi
 np.sqrt(df)
 ```
 
-When you an operation involves two `DataFrame` instance, the operations are applied to pairs of elements with matching column names and indices.
+When an operation involves two `DataFrame` instances, the operations are applied to pairs of elements with matching column names and indices.
 Unpaired elements will evaluate to `NaN`.
 
 ```{code-cell} ipython3
@@ -265,6 +265,105 @@ df2 = pd.DataFrame(
     columns = ["a","b","c"]
 )
 df + df2
+```
+
+You can retrieve entire columns of a `DataFrame` by indexing.
+This retrieves a `Series` instance representing the column.
+
+```{code-cell} ipython3
+df["a"]
+```
+
+If you assign a new series instance to an existing column, the column will be replaced with the new `Series` instance.
+Note that the new `Series`'s indices must match your `DataFrame`'s existing indices.
+Unmatched indices will produce `NaN` values.
+
+```{code-cell} ipython3
+# the new series's indices will match df's default indices
+df["a"] = pd.Series(np.zeros(3))
+```
+
+```{code-cell} ipython3
+# mismatched indices will produce NaN entries
+df["a"] = pd.Series(np.ones(3), index = [4,5,6])
+```
+
+Assigning to a non-existent column name will add a new column to the `DataFrame`.
+
+```{code-cell} ipython3
+df2
+```
+
+```{code-cell} ipython3
+df2["d"] = pd.Series(["new data1", "new data2"])
+```
+
+You can retrieve entire rows using the attribute `loc`.
+This retrieves a `Series` instance with column names serving as the `Series` instance's index.
+
+```{code-cell} ipython3
+df2.loc[1]
+```
+
+To add new row, you can create new `DataFrame` containing one row and use the function `pd.concat()`.
+In the example below, we create the new `DataFrame` from a list containing one dictionary.
+
+```{code-cell} ipython3
+row = pd.DataFrame([{"a":10, "b":20, "c":30, "d":40}], index = [len(df)])
+
+extended_df = pd.concat([df, row])
+extended_df
+```
+
+> To avoid duplicates, make sure `row` uses new indices
+
+You can also add more than one row, by adding more dictionaries in the list of dictionaries passed in the `DataFrame` constructor.
+
+```{code-cell} ipython3
+rows = pd.DataFrame([
+    {"a":20, "b":30, "c":40, "d":50},
+    {"a":10, "b":40, "c":50, "d":60}
+], index = [len(extended_df), len(extended_df) + 1])
+
+extended_df = pd.concat([extended_df, rows])
+extended_df
+```
+
+You can also add single rows by assigning a new index to the `loc` attribute.
+
+```{code-cell} ipython3
+extended_df.loc[len(extended_df)] = {"a":100, "b":100, "c":100, "d":100}
+extended_df
+```
+
+> If you want to retrieve a row based on its position, use the `iloc` attribute instead.
+
+You can also use the same syntax to change existing rows.
+
+```{code-cell} ipython3
+extended_df.loc[0] = {"a":0, "b":0, "c":0, "d":0}
+extended_df
+```
+
+To retrieve a specific cell, you can combine retrieve an entire column as a `Series` instance and retrieve the specific element using `Series` indexing.
+
+```{code-cell} ipython3
+extended_df["b"][3]
+```
+
+Note, it is not advised to use this to change the value of a cell since `extended["b"]` is just a copy of a slice from the original `DataFrame`, `df2`.
+Pandas warns you about the caveats of this.
+
+```{code-cell} ipython3
+extended_df["b"][1] = -1
+extended_df
+```
+
+Instead, use the `at` attribute to change the cell
+
+```{code-cell} ipython3
+extended_df.at[1, "b"] = -1
+extended_df
 ```
 
 ## `matplotlib`
