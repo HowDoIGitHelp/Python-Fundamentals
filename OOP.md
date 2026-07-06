@@ -11,15 +11,15 @@ kernelspec:
   name: python3
 ---
 
-# Object Oriented Programming
+# Object-oriented Programming
 
-As a modern programming language, python features object oriented programming features.
+As a modern programming language, python features object-oriented programming features.
 While OOP is a broad and deep domain, we will be introduced to its concepts in this discussion.
 
 One of the main philosophies of OOP is the concept of encapsulation and data hiding.
 OOP achieves these concepts through classes.
 Classes are able to encapsulate data and code through attributes and methods.
-Lets look at an example of a class:
+Let's look at an example of a class:
 
 ## Methods
 
@@ -32,7 +32,7 @@ class ExampleClass:
         print('this is an example method')
 ```
 
-This class is called `ExampleClass` and it contains one method called `exampleMethod()`.
+This class is called `ExampleClass`, and it contains one method called `exampleMethod()`.
 In the example below we can see how `exampleMethod()` is called with respect to `ExampleClass`
 
 ```{code-cell} ipython3
@@ -41,16 +41,16 @@ inst = ExampleClass()
 inst.exampleMethod()
 ```
 
-In the example above we create an **instance**/**object** of `ExampleClass` called `objectInstance`.
+The example above shows the creation of an **instance**/**object** of `ExampleClass` called `objectInstance`.
 In the same way `3` is an instance of `int` and `'word'` is an instance of `str`, the variable `inst` is an instance of `ExamnpleClass()`.
 
 > Creating an instance of a class is also known as instantiation
 
 With an instance of `ExampleClass()` we can invoke its method `exampleMethod()` using dot notation: `inst.exampleMethod()`.
 
-In the definition of `exampleMethod()` note that we pass a parameter called `self` but we don't pass an argument during invocation.
+In the definition of `exampleMethod()` note that we pass a parameter called `self`, but we don't pass an argument during invocation.
 In an instance's method, the first parameter defined (in this case `self`) is a reference to the instance itself.
-When invoking said method, the instance is passed by default through dot reference so we don't pass it as an argument.
+When invoking said method, the instance is passed by default through dot reference, so we don't pass it as an argument.
 You'll see a clearer example of this later.
 
 +++
@@ -97,7 +97,7 @@ print(inst2.localVar)
 When you create an instance of a class (e.g.
 `inst2.ExampleClass2()`) you are actually calling the `__init__()` function associated to that class.
 The `__init__()` function is called to initialize/prepare the attributes of the instance.
-The `__init__()` function can also defined with parameters.
+The `__init__()` function can also be defined with parameters.
 This allows us to create unique instances of a class.
 
 ```{code-cell} ipython3
@@ -162,7 +162,7 @@ c2.method2()
 ```
 
 In the example above `Class2` is defined to inherit from `Class1` through the syntax (`class Class2(Class1):`).
-Even though `Class2` doesn't contain definitions of `method1()` and `__init__()`, we can still said methods since they are automatically inherited by `Class2`.
+Even though `Class2` doesn't contain definitions of `method1()` and `__init__()`, we can still use said methods since they are automatically inherited by `Class2`.
 As you can see in this example inheritance helps us reduce code duplication.
 We don't have to rewrite the inherited methods, we simply define an inheritance relationship.
 This also helps with maintainability since we only have one copy `method1()`.
@@ -189,7 +189,7 @@ c3.method3()
 Sometimes an inheriting class (child) might need to modify an inherited (parent) method.
 To do this we simply redefine the inherited method with the same name.
 When said modified method is called it will invoke the child class' version of the method instead.
-In such scenario we the parent method is **overridden** by the child method.
+In such scenario, the parent method is **overridden** by the child method.
 
 ```{code-cell} ipython3
 class Class4(Class2):
