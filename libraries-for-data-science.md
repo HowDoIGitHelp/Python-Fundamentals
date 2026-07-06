@@ -281,11 +281,13 @@ Unmatched indices will produce `NaN` values.
 ```{code-cell} ipython3
 # the new series's indices will match df's default indices
 df["a"] = pd.Series(np.zeros(3))
+df
 ```
 
 ```{code-cell} ipython3
 # mismatched indices will produce NaN entries
 df["a"] = pd.Series(np.ones(3), index = [4,5,6])
+df
 ```
 
 Assigning to a non-existent column name will add a new column to the `DataFrame`.
