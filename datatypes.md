@@ -348,7 +348,7 @@ In the case above, the element at index 1, is `Banana`. Running `del items[1]` d
 
 +++
 
-We can also delete items based on value. This is done througn the remove function. This function removes the first item that matches the the specified value
+We can also delete items based on value. This is done through the remove function. This function removes the first item that matches the specified value
 
 ```{code-cell} ipython3
 items = ['Apple', 'Cherry', 'Banana', 'Cherry']
@@ -638,7 +638,7 @@ Or if you were intending to add
 int('123') + 4
 ```
 
-In some cases, you migh expect types to be incompatible but in fact they actually are
+In some cases, you might expect types to be incompatible but in fact they actually are
 
 ```{code-cell} ipython3
 True + True
@@ -673,7 +673,7 @@ These operators are mainly used for numerical calculations. But can also be used
 
 ### Assignment 
 
-These operators change the values of the variables on the left hand side
+These operators change the values of the variables on the left-hand side
 
 | Operator | Example       | Same As         |
 | -------- | ------------- | --------------- |
@@ -694,7 +694,7 @@ These operators change the values of the variables on the left hand side
 
 ### Comparison operator
 
-These operators compare comparable types (like ints and floats) and returns a boolean literals depending on the comparison
+These operators compare comparable types (like `ints` and `float`s) and returns a boolean literals depending on the comparison
 
 | Operator | Name                     | Example   | Evaluation |
 | -------- | ------------------------ | --------- | ---------- |
@@ -727,7 +727,7 @@ These operators are used to check if the left operand evaluate into the same ins
 
 ### Membership operators
 
-These operators are used to check if the left operand is a member of the right operand. Right operand can be sequence types like lists,tuples,strings, and dicts
+These operators are used to check if the left operand is a member of the right operand. Right operand can be sequence types like lists, tuples, strings, and dicts
 
 | Operator | Description                                    | Example            | Evaluation |
 | -------- | ---------------------------------------------- | ------------------ | ---------- |
