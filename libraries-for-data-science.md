@@ -153,6 +153,10 @@ print(arr[:5:-2])
 print(arr[arr % 2 == 0])
 ```
 
+You can learn advanced `numpy` usage in their user guide: [^numpy_guide]
+
+[^numpy_guide]: https://numpy.org/doc/stable/user/index.html
+
 ## `pandas`
 
 The `pandas` library features is used for all manners of data analysis tasks.
@@ -367,5 +371,47 @@ Instead, use the `at` attribute to change the cell
 extended_df.at[1, "b"] = -1
 extended_df
 ```
+You can learn more about advanced `pandas` usage in their use guide[^pandas_guide].
+
+[^pandas_guide]: https://pandas.pydata.org/community/blog/pandas-3.0.html
 
 ## `matplotlib`
+
+The library `matplotlib` is used to create highly customizable visualizations.
+The library allows you to create multiple subplot visualizations, customizable axes, tick-marks, tick labels, axes, markers, and more.
+It also seamlessly works with `numpy` and `pandas`.
+
+Here's an example of a simple visualization of a plot containing one line plot.
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+x_values = np.arange(-100, 100)
+ax.plot(x_values, x_values ** 3)
+
+plt.show()
+```
+
+In the example above, we initialize a visualization using the function `plt.subplots()`.
+This function returns a pair of values, a figure object and an axes object.
+These are unpacked and store to the variables `fig` and `ax`.
+
+In `matplotlib` a visualization is called a figure.
+A figure can be made up of multiple subplots.
+Since we initialized `fig` and `ax` using `plt.subplots()` (no arguments), by defaults, generated figure has one subplot.
+
+For example, if you want a 2x3 grid of subplots, then you need to initialize your subplots as such:
+
+```{code-cell} ipython3
+fig2, axs = plt.subplots(2,3)
+axs[0][2].plot(x_values, x_values ** 3)
+plt.show()
+```
+
+To edit a specific subplot, you simply need to index them by their row and column number in the grid.
+
+You can learn more about the types of visualization you can create in `matplotlib`, how to customize a plot and more in their user guide[^matplotlib_guide]:
+
+[^matplotlib_guide]: https://matplotlib.org/stable/users/index.html
+
